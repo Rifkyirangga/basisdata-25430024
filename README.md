@@ -2,4 +2,4 @@
 
    - Nama  : Rifky Irangga
    - NPM   : 25430024
-   - Kelas : B
+   - Kelas : A
