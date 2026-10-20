@@ -1,0 +1,74 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram id="kopma-erd-p03" name="ERD Kopma">
+    <mxGraphModel dx="1602" dy="964" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#dae8fc;strokeColor=#555555;fontSize=12;spacing=4;" value="&lt;div style=&quot;text-align: center; border-bottom: 1px solid rgb(102, 102, 102); padding: 5px;&quot;&gt;&lt;div style=&quot;border-bottom: 1px solid rgb(102, 102, 102); padding: 5px;&quot;&gt;&lt;b&gt;anggota&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;border-bottom: 1px solid rgb(102, 102, 102); padding: 5px;&quot;&gt;&lt;b&gt;PK&amp;nbsp; id_anggota&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;border-bottom: 1px solid rgb(102, 102, 102); padding: 5px;&quot;&gt;&lt;b&gt;AK&amp;nbsp; no_anggota&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;border-bottom: 1px solid rgb(102, 102, 102); padding: 5px;&quot;&gt;&lt;b&gt;AK&amp;nbsp; nim_anggota&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;border-bottom: 1px solid rgb(102, 102, 102); padding: 5px;&quot;&gt;&lt;b&gt;&amp;nbsp; &amp;nbsp; nama_anggota&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;border-bottom: 1px solid rgb(102, 102, 102); padding: 5px;&quot;&gt;&lt;b&gt;&amp;nbsp; &amp;nbsp; prodi_anggota&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;border-bottom: 1px solid rgb(102, 102, 102); padding: 5px;&quot;&gt;&lt;b&gt;&amp;nbsp; &amp;nbsp; no_hp_anggota&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;border-bottom: 1px solid rgb(102, 102, 102); padding: 5px;&quot;&gt;&lt;b&gt;&amp;nbsp; &amp;nbsp; status_anggota&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;border-bottom: 1px solid rgb(102, 102, 102); padding: 5px;&quot;&gt;&lt;b&gt;&amp;nbsp; &amp;nbsp; tgl_daftar_anggota&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="250" width="270" x="60" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="LTcHiiYqaRcpGhS3e2ts-32" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=gap;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;" target="8">
+          <mxGeometry relative="1" x="0.1525" as="geometry">
+            <Array as="points">
+              <mxPoint x="405" y="305" />
+              <mxPoint x="510" y="305" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LTcHiiYqaRcpGhS3e2ts-35" connectable="0" parent="LTcHiiYqaRcpGhS3e2ts-32" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];defaultLabelBackgroundColor=gap;" value="menerima&lt;div&gt;{1&amp;nbsp; &amp;nbsp;: 0.. N}&amp;nbsp;&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.6475" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#d5e8d4;strokeColor=#555555;fontSize=12;spacing=4;" value="&lt;div style=&#39;font-weight:bold;text-align:center;border-bottom:1px solid #666;padding:5px&#39;&gt;petugas&lt;/div&gt;&lt;div style=&#39;text-align:left;padding:5px;line-height:1.5&#39;&gt;PK  kode_petugas&lt;br&gt;nama_petugas&lt;br&gt;peran_petugas&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="270" x="270" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#fff2cc;strokeColor=#555555;fontSize=12;spacing=4;" value="&lt;div style=&quot;font-weight: bold; text-align: center; border-bottom: 1px solid rgb(102, 102, 102); padding: 5px;&quot;&gt;penjualan&lt;/div&gt;&lt;div style=&quot;text-align:left;padding:5px;line-height:1.5&quot;&gt;PK  no_nota_penjualan&lt;br&gt;FK  kode_petugas&lt;br&gt;FK  id_anggota (opsional)&lt;br&gt;tgl_penjualan&lt;br&gt;bayar_penjualan&lt;br&gt;total (turunan)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="210" width="300" x="800" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#f8cecc;strokeColor=#555555;fontSize=12;spacing=4;" value="&lt;div style=&quot;font-weight: bold; text-align: center; border-bottom: 1px solid rgb(102, 102, 102); padding: 5px;&quot;&gt;detail_penjualan&lt;/div&gt;&lt;div style=&quot;text-align:left;padding:5px;line-height:1.5&quot;&gt;PK,FK  no_nota_penjualan&lt;br&gt;PK,FK  kode_barang&lt;br&gt;qty_detail_penjualan&lt;br&gt;harga_satuan_detail_penjualan&lt;br&gt;subtotal (turunan)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="310" x="1200" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#e1d5e7;strokeColor=#555555;fontSize=12;spacing=4;" value="&lt;div style=&quot;font-weight: bold; text-align: center; border-bottom: 1px solid rgb(102, 102, 102); padding: 5px;&quot;&gt;barang&lt;/div&gt;&lt;div style=&quot;text-align:left;padding:5px;line-height:1.5&quot;&gt;PK  kode_barang&lt;br&gt;nama_barang&lt;br&gt;kategori_barang&lt;br&gt;harga_jual_barang&lt;br&gt;stok_barang&lt;br&gt;stok_min_barang&lt;/div&gt;" vertex="1">
+          <mxGeometry height="210" width="310" x="1220" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#d5e8d4;strokeColor=#555555;fontSize=12;spacing=4;" value="&lt;div style=&quot;font-weight: bold; text-align: center; border-bottom: 1px solid rgb(102, 102, 102); padding: 5px;&quot;&gt;pemasok&lt;/div&gt;&lt;div style=&quot;text-align:left;padding:5px;line-height:1.5&quot;&gt;PK kode_pemasok&lt;br&gt;nama_pemasok&lt;br&gt;no_telepon_pemasok&lt;br&gt;alamat_pemasok&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="270" x="30" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#fff2cc;strokeColor=#555555;fontSize=12;spacing=4;" value="&lt;div style=&quot;font-weight: bold; text-align: center; border-bottom: 1px solid rgb(102, 102, 102); padding: 5px;&quot;&gt;pembelian&lt;/div&gt;&lt;div style=&quot;text-align:left;padding:5px;line-height:1.5&quot;&gt;PK  no_faktur_pembelian&lt;br&gt;FK kode_pemasok&lt;br&gt;FK  kode_petugas&lt;br&gt;tgl_pembelian&lt;br&gt;status_pembelian&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="300" x="405" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#f8cecc;strokeColor=#555555;fontSize=12;spacing=4;" value="&lt;div style=&quot;font-weight: bold; text-align: center; border-bottom: 1px solid rgb(102, 102, 102); padding: 5px;&quot;&gt;detail_pembelian&lt;/div&gt;&lt;div style=&quot;text-align:left;padding:5px;line-height:1.5&quot;&gt;PK,FK  no_faktur_pembelian&lt;br&gt;PK,FK  kode_barang&lt;br&gt;qty_detail_pembelian&lt;br&gt;harga_beli_detail_pembelian&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="300" x="800" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="20" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.5;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;fontSize=11;labelBackgroundColor=#ffffff;" target="4" value="melayani&lt;br/&gt;[1 : 0..N]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="21" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.5;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;fontSize=11;labelBackgroundColor=#ffffff;" target="4" value="melakukan (opsional pada penjualan)&lt;br/&gt;[0..1 : 0..N]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="22" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.5;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;fontSize=11;labelBackgroundColor=#ffffff;" target="5" value="berisi&lt;br/&gt;[1 : 1..N]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="23" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.5;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;fontSize=11;labelBackgroundColor=#ffffff;" target="5" value="tercantum pada&lt;br/&gt;[1 : 0..N]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="24" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.5;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;fontSize=11;labelBackgroundColor=#ffffff;" target="8" value="menerima pembelian&lt;br/&gt;[1 : 0..N]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="25" edge="1" parent="1" source="8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.5;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;fontSize=11;labelBackgroundColor=#ffffff;" target="9" value="berisi&lt;br/&gt;[1 : 1..N]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="26" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.5;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;fontSize=11;labelBackgroundColor=#ffffff;" target="9" value="dibeli pada rincian&lt;br/&gt;[1 : 0..N]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="30" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;align=left;verticalAlign=top;" value="&lt;div style=&#39;font-weight:bold;text-align:center&#39;&gt;LEGENDA&lt;/div&gt;&lt;div style=&#39;text-align:left;padding:4px&#39;&gt;PK = Primary Key / kunci primer&lt;br/&gt;FK = Foreign Key / kunci asing&lt;br/&gt;AK = Alternate Key / kunci alternatif&lt;br/&gt;Turunan = nilai dihitung, bukan atribut biasa yang disimpan&lt;br/&gt;1 = tepat satu; 0..1 = nol atau satu; 0..N = nol atau banyak; 1..N = satu atau banyak&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="600" x="40" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="31" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" value="&lt;div style=&quot;font-size:18px;font-weight:bold&quot;&gt;ERD KOPERASI MAHASISWA SEJAHTERA (KOPMA)&lt;/div&gt;&lt;div&gt;Disusun oleh: Rifky Irangga | NIM: 25430024&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="690" x="1010" y="820" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
